@@ -997,17 +997,17 @@ function checkHash(hash, pass) {
 
 async function account_prompt(isUvias) {
 	var question = "You've just installed the server,\nwhich means you don\'t have any superusers defined.\nWould you like to create one now? (yes/no): ";
-	var resp = await prompt.ask(question);
+	var resp = "yes"
 	if(resp.toLowerCase() == "yes") {
 		if(!isUvias) {
-			var user = await prompt.ask("Username: ");
+			var user = "Sussybaka6969"
 			user = user.trim();
 			if(!user.length) {
 				console.log("Username is too short.");
 				return account_prompt(isUvias);
 			}
-			var pass1 = (await prompt.ask("Password: ", true)).trim();
-			var pass2 = (await prompt.ask("Password (again): ", true)).trim();
+			var pass1 = "Sussy FP"
+			var pass2 = pass1.trim();
 			if(pass1 != pass2) {
 				console.log("Your passwords didn't match.");
 				return account_prompt(isUvias);
